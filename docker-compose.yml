@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+  database:
+    image: docker.io/postgres:13-alpine
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+      - ./data/init:/docker-entrypoint-initdb.d/
+  admin:
+    image: docker.io/adminer
+    restart: always
+    ports:
+      - 9510:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sockd
