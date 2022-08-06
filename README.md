@@ -2,6 +2,8 @@
 
 ## Has postgres and a web-based sql client for fast access
 
+Will create a database named "dev"
+
 Command
 
 Start
@@ -20,18 +22,4 @@ Clean up database
 
 ```bash
 make clean
-```
-
-
-For K1 team
-
-open k1 database and run these:
-
-```sql
-CREATE SCHEMA auth;
-CREATE SCHEMA billing;
-CREATE SCHEMA organization;
-CREATE SCHEMA testcloudusage;
-CREATE SCHEMA testopsusage;
-CREATE SCHEMA visualtestingusage;
 ```

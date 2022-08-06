@@ -1,2 +1,5 @@
 **/db/**
 **/postgres*/**
+.vscode/dryrun.log
+.vscode/dryrun.log
+.vscode/targets.log
